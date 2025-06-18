@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+</style>
+<body>
+    <h1>{{ title }} Weather</h1>
+
+    <p>{{ status }} and {{ temp }} &deg;F</p>
+    <p>Feels like {{ feels_like }} &deg;F</p>
+
+    <form action="/weather">
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" placeholder="Enter a city" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+.winky-sans {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2rem;
+    background-color: #5aa5da;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+    font-family: "Winky Sans", sans-serif;
+}
+
+input,button{
+    font-size: 2rem;
+    font-family: "Winky Sans", sans-serif;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+ 
