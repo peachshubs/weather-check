@@ -22,7 +22,7 @@ body{
     gap: 2rem;
     font-size: 2rem;
     font-family: "Winky Sans", sans-serif;
-    background-image: url("/static/bluesky.jpg");
+    background-image: url("/static/styles/bluesky.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 
