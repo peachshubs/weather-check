@@ -2,9 +2,9 @@ from flask import Flask, render_template, request
 from weather import get_current_weather
 from waitress import serve
 
-app= Flask(__name__) # makes it a flask app
+app= Flask(__name__)
 @app.route('/')
-@app.route('/index') # accesses the home page
+@app.route('/index')
 
 def index():
     return render_template('index.html')
@@ -22,12 +22,12 @@ def get_weather():
     "weather.html",
     title=weather_data["name"],
     status=weather_data["weather"][0]["description"].capitalize(),
+    weather_type=weather_data["weather"][0]["main"],
     temp=f"{weather_data['main']['temp']:.1f}",
     feels_like=f"{weather_data['main']['feels_like']:.1f}"
     )
 
 
 if __name__=="__main__":
-    serve(app,host="0.0.0.0", port=8000) # uses local host
+    serve(app,host="0.0.0.0", port=8000)
 
-# type localhost: 8000 to run page
